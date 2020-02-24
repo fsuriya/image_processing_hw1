@@ -33,4 +33,5 @@ def pqN(p, q, img, row, col):
     # print('Upq : ' + str(Upq))
     # print('U00 : ' + str(U00))
     # print('n : ' + str(n))
+    
     return n

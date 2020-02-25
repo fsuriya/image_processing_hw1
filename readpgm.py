@@ -22,6 +22,7 @@ def read_pgm(filename, col, row):
     # print(len(img))
     for i in range(len(img)):
         list_img.append((ord(img[i])))
+    list_img = fix_miss_pixel(list_img)
     return list_img, col, row
 
 
@@ -44,7 +45,8 @@ def copy(lists):
     return copy_list
 
 
-# def copy_dict(dic):
-#     copy_dict = {}
-#     for i in range(dic):
-#         copy_dict
+def fix_miss_pixel(list_img):
+    if len(list_img) == 65534:
+        for i in range(2):
+            list_img.append(0)
+    return list_img

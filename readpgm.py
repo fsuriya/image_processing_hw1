@@ -49,4 +49,7 @@ def fix_miss_pixel(list_img):
     if len(list_img) == 65534:
         for i in range(2):
             list_img.append(0)
+    if len(list_img) == 331198:
+        for i in range(2):
+            list_img.append(0)
     return list_img

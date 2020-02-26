@@ -1,8 +1,8 @@
 from readpgm import read_pgm, list_to_2D_list, copy
 from writepgm import writepgm
 from etc_function import createHistogram
-# filename = "./image/2./Cameraman.pgm"
-filename = "./image/2./SEM256_256.pgm"
+filename = "./image/2./Cameraman.pgm"
+# filename = "./image/2./SEM256_256.pgm"
 
 converted_img = []
 mattrix_img = []
@@ -60,5 +60,5 @@ print(histogram_db)
 
 print("-------------")
 print("After " + str(new_histogram))
-filename_new = "test.pgm"
+filename_new = "cameraman.pgm"
 writepgm(filename_new, mattrix_img, col, row)

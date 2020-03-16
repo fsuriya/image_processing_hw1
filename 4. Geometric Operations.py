@@ -3,7 +3,7 @@ from etc_function import solve4eqaultion, Bilinear
 from dist_list import disgrid, grid
 from writepgm import writepgm
 filename = "./image/4./distlenna.pgm"
-
+# filename = "./image/4./distgrid.pgm"
 
 col = 0
 row = 0
@@ -55,9 +55,6 @@ for i in range(len(grid)-1):
             xy[k][1] = y[k]
             xy[k][2] = x[k]*y[k]
             xy[k][3] = 1
-
-        # inverse = inverst(xy)
-        # print(inverse)
         x_dist[0] = dist[i][j][0]
         x_dist[1] = dist[i][j+1][0]
         x_dist[2] = dist[i+1][j][0]
@@ -75,8 +72,7 @@ for i in range(len(grid)-1):
             w[k] = w1_to_4[k]
         for k in range(len(w5_to_8)):
             w[k+4] = w5_to_8[k]
-        # if j == len(grid)-2 and i == len(grid)-2:
-        # print(w)
+
         for k in range(y[0], y[2]):
             for l in range(x[0], x[1]):
                 xp = (w[0]*l + w[1]*k + w[2]*l*k + w[3])

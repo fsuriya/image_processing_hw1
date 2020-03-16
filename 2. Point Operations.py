@@ -47,8 +47,6 @@ for D in histogram_db:
 # convert from {DA : DB} to {DB : DA}
 histogram_db = dict((y, x) for x, y in histogram_db.items())
 # current dict is {DB : DA }
-test_array = []
-test = 0
 for i in range(len(mattrix_img)):
     for j in range(len(mattrix_img[i])):
         for key in histogram_db:

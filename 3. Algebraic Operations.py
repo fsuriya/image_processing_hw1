@@ -69,7 +69,6 @@ exceedgreen_filename = "exceedgreen.pgm"
 red_blue_diff_filename = "red-blue-differentce.pgm"
 intensity_filename = "intensity.pgm"
 
-# writepgm(exceedgreen_filename, exceedgreen, col, row)
-# writepgm(red_blue_diff_filename, red_blue_diff, col, row)
-# writepgm(intensity_filename, intensity, col, row)
-print(mattrix_img_blue)
+writepgm(exceedgreen_filename, exceedgreen, col, row)
+writepgm(red_blue_diff_filename, red_blue_diff, col, row)
+writepgm(intensity_filename, intensity, col, row)

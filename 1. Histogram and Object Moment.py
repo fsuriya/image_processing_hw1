@@ -29,8 +29,6 @@ print(object_dict)
 
 maskesOb_img = copy(mattrix_img)
 
-check = []
-countcheck = 0
 
 for key in object_dict:
 
@@ -38,12 +36,10 @@ for key in object_dict:
         for j in range(col):
             if mattrix_img[i][j] == key:
                 maskesOb_img[i][j] = 1
-                countcheck += 1
+
             else:
                 maskesOb_img[i][j] = 0
-    # check.append(countcheck)
-    # print(countcheck)
-    countcheck = 0
+
     U20 = pqHu(2, 0, maskesOb_img, row, col)
     U02 = pqHu(0, 2, maskesOb_img, row, col)
     N20 = pqN(2, 0, maskesOb_img, row, col)
@@ -53,4 +49,3 @@ for key in object_dict:
     print("Central moment of an Object on gray level(" +
           str(key) + ") : U20 = " + str(U20) + ", U02 =" + str(U02) + ", Theata = " + str(theata))
     maskesOb_img = copy(mattrix_img)
-# print(check)

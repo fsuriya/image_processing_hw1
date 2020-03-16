@@ -21,7 +21,6 @@ def pqHu(p, q, img, row, col):
                 u += (pow((i - (m10/m00)), p) * pow((j - (m01/m00)), q)) * 1
             else:
                 pass
-    # print("u" + str(u))
     return u
 
 
@@ -30,8 +29,4 @@ def pqN(p, q, img, row, col):
     U00 = pow(pqHu(0, 0, img, row, col), (((p+q)/2)+1))
 
     n = Upq / U00
-    # print('Upq : ' + str(Upq))
-    # print('U00 : ' + str(U00))
-    # print('n : ' + str(n))
-    
     return n

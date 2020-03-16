@@ -38,7 +38,12 @@ for D in histogram_db:
 for D in histogram_db:
     histogram_db[D] = histogram_db[D]*255  # convert to CMF
 for D in histogram_db:
-    histogram_db[D] = int(histogram_db[D] // 1)  # floor number
+    # histogram_db[D] = int(histogram_db[D] // 1)  # floor number
+    temp = int(histogram_db[D])
+    if temp - (histogram_db[D]) >= 0.5:
+        histogram_db[D] = temp + 1
+    else:
+        histogram_db[D] = int(histogram_db[D])
 # convert from {DA : DB} to {DB : DA}
 histogram_db = dict((y, x) for x, y in histogram_db.items())
 # current dict is {DB : DA }

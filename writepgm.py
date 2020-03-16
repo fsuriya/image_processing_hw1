@@ -5,8 +5,8 @@ def writepgm(filename, mattriximg, col, row):
     for i in range(len(mattriximg)):
         for j in range(len(mattriximg[i])):
             mattriximg[i][j] = chr(int(mattriximg[i][j]))
+            # print(mattriximg)
             string += mattriximg[i][j]
-
     f = open(filename, "a", encoding="ISO-8859-1")
 
     f.write("P5 \r")
